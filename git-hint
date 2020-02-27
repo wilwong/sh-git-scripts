@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# All the potentially destructive git commands
+# that i can never remember
+# but i dont want a shorthand for
+
+echo '----UNDO COMMIT----'
+echo 'git reset HEAD'
+echo '--soft: uncommit changes, changes are left staged (index).'
+echo '--mixed (default): uncommit + unstage changes, changes are left in working tree.'
+echo '--hard: uncommit + unstage + delete changes, nothing left.'
+
+echo '----DELETE BRANCH----'
+echo 'git branch -d the_local_branch_name'
+echo 'git push origin --delete the_remote_branch_name'

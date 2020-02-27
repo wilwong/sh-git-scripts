@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#on ios, you need to download cloc via brew
+#brew update
+#brew install cloc
+
+cloc $(git ls-files)

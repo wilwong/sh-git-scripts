@@ -1,0 +1,24 @@
+#!/bin/bash
+#Assuming sublime is in your PATH
+#this open sublime project accordingly
+
+
+if [ -f "$1" ]
+then
+  sublime $1
+else
+  if [ -d "$1" ]
+  then
+    cd $1
+    count=`ls -1 *.sublime-project 2>/dev/null | wc -l`
+    if [ $count != 0 ]
+    then 
+      files=(*.sublime-project)
+      echo "Opening ${files[0]}"
+      sublime ${files[0]}
+    else
+      sublime .
+    fi 
+  fi
+fi
+
